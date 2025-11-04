@@ -1,4 +1,9 @@
-/* VARIABLES BÁSICAS */
+/* ============================================================
+   PABLO GONZÁLEZ AJA · PORTFOLIO GEOAI & SIG
+   Estilos principales para GitHub Pages
+   ============================================================ */
+
+/* ---------- VARIABLES DE COLOR Y LAYOUT ---------- */
 :root {
   --bg-main: #061920;
   --bg-alt: #09252f;
@@ -13,7 +18,7 @@
   --transition: 0.2s ease-out;
 }
 
-/* RESETEO MUY SUAVE */
+/* ---------- RESETEO ---------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,7 +42,7 @@ a {
   color: inherit;
 }
 
-/* ESTRUCTURA GENERAL */
+/* ---------- ESTRUCTURA GENERAL ---------- */
 .page {
   min-height: 100vh;
   display: flex;
@@ -51,7 +56,7 @@ a {
   padding: 2rem 1.25rem 3rem;
 }
 
-/* CABECERA */
+/* ---------- CABECERA ---------- */
 .site-header {
   position: sticky;
   top: 0;
@@ -101,7 +106,7 @@ a {
   color: var(--text-muted);
 }
 
-/* NAVEGACIÓN */
+/* ---------- NAVEGACIÓN ---------- */
 .nav ul {
   list-style: none;
   display: flex;
@@ -136,7 +141,7 @@ a {
   width: 100%;
 }
 
-/* BOTÓN MENÚ MÓVIL */
+/* ---------- MENÚ MÓVIL ---------- */
 .nav-toggle {
   display: none;
   background: none;
@@ -146,7 +151,7 @@ a {
   cursor: pointer;
 }
 
-/* HERO */
+/* ---------- HERO ---------- */
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
@@ -206,7 +211,9 @@ a {
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: background var(--transition), color var(--transition),
+    transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
 }
 
 .btn-primary {
@@ -232,7 +239,7 @@ a {
   background: rgba(9, 37, 47, 0.9);
 }
 
-/* HERO LADO LOGO */
+/* ---------- HERO: BLOQUE LOGO ---------- */
 .hero-logo-block {
   display: flex;
   flex-direction: column;
@@ -289,7 +296,7 @@ a {
   font-weight: 600;
 }
 
-/* SECCIONES */
+/* ---------- SECCIONES ---------- */
 .section {
   margin-top: 2.5rem;
 }
@@ -314,7 +321,7 @@ a {
   color: var(--text-muted);
 }
 
-/* TARJETAS / GRID */
+/* ---------- TARJETAS / GRID ---------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -363,7 +370,7 @@ a {
   text-decoration: underline;
 }
 
-/* CONTACTO & REDES */
+/* ---------- CONTACTO & REDES ---------- */
 .contact-card {
   background: radial-gradient(circle at left, rgba(59, 228, 184, 0.12), rgba(6, 25, 32, 1));
   border-radius: var(--radius);
@@ -390,7 +397,8 @@ a {
   border: 1px solid rgba(155, 179, 196, 0.6);
   font-size: 0.85rem;
   background: rgba(4, 16, 20, 0.7);
-  transition: background var(--transition), transform var(--transition), border-color var(--transition);
+  transition: background var(--transition), transform var(--transition),
+    border-color var(--transition);
 }
 
 .social-links a:hover {
@@ -399,7 +407,7 @@ a {
   transform: translateY(-1px);
 }
 
-/* PIE DE PÁGINA */
+/* ---------- PIE DE PÁGINA ---------- */
 .site-footer {
   border-top: 1px solid var(--border-soft);
   padding: 1rem 1.25rem 1.4rem;
@@ -416,7 +424,7 @@ a {
   flex-wrap: wrap;
 }
 
-/* RESPONSIVE */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: minmax(0, 1fr);
@@ -459,7 +467,8 @@ a {
     visibility: hidden;
     transform: scale(0.95);
     transform-origin: top right;
-    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+    transition: opacity var(--transition), transform var(--transition),
+      visibility var(--transition);
   }
 
   .nav ul.open {
@@ -472,4 +481,3 @@ a {
     grid-template-columns: minmax(0, 1fr);
   }
 }
-
