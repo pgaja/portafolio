@@ -1,133 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apadrinamiento LIG Cueva de El Castillo | PAGLA</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apadrinamiento LIG Cueva de El Castillo (CV014) | PAGLA</title>
+  <meta name="description" content="Proyecto de apadrinamiento del Lugar de Interés Geológico CV014 – Cueva de El Castillo (Puente Viesgo, Cantabria), dentro de la iniciativa 'Apadrina una roca' del IGME-CSIC." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    /* --- Estilo coherente con el index --- */
-    body {
-      background-color: #0b1417;
-      color: #e6e6e6;
-      font-family: 'Inter', 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.7;
-    }
-    header {
-      position: relative;
+    /* --- Ajustes locales coherentes con styles.css --- */
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      color: #fff;
+      gap: 1rem;
+      padding: 3rem 1rem;
+      background: linear-gradient(to bottom, rgba(10,25,30,0.7), rgba(5,10,12,0.95)),
+                  url('assets/cueva-castillo.jpg') center/cover no-repeat;
+      color: #e8f7f0;
+      border-radius: 20px;
+      margin-bottom: 2rem;
     }
-    header img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      filter: brightness(0.55);
-      border-bottom: 3px solid #1b4b45;
-    }
-    header h1 {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
+
+    .hero-inner h2 {
       font-size: 2rem;
-      font-weight: 600;
-      color: #eafbf7;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+      color: #9fe870;
+      margin: 0.5rem 0;
     }
+
+    .hero-inner p {
+      max-width: 800px;
+      font-size: 1.05rem;
+      color: #cde7dd;
+      line-height: 1.6;
+    }
+
     main {
-      max-width: 900px;
-      margin: 3rem auto;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .content-grid { grid-template-columns: 1fr; }
+    }
+
+    article {
       background: rgba(255,255,255,0.02);
       border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
       padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
-    h2 {
-      color: #8de3bb;
-      font-size: 1.5rem;
-      margin-top: 0;
-    }
-    p {
-      margin-bottom: 1.2rem;
-      font-size: 1rem;
-      color: #d8e0e2;
-    }
-    .info {
-      background: rgba(255,255,255,0.05);
-      border-left: 4px solid #45c29e;
-      padding: 1rem 1.2rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-    }
-    .info strong {
+
+    article h3 {
       color: #9fe870;
+      margin-top: 0;
+      font-size: 1.3rem;
     }
-    .btn-back {
+
+    article p {
+      color: #dce3e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    aside {
+      background: rgba(255,255,255,0.02);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    aside h4 {
+      color: #9fe870;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .meta-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .meta-list li { margin-bottom: 0.5rem; }
+
+    .meta-list a {
+      color: #7ae7c7;
+      text-decoration: none;
+    }
+
+    .meta-list a:hover { text-decoration: underline; }
+
+    .diploma-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(122,231,199,0.4);
+      background: #0b1417;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+    }
+
+    .diploma-frame iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+    }
+
+    .back-link {
       display: inline-block;
       margin-top: 2rem;
-      background: #45c29e;
-      color: #0b1417;
       padding: 0.6rem 1.2rem;
+      border: 1px solid #9fe870;
       border-radius: 8px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
+      color: #9fe870;
+      transition: 0.3s;
     }
-    .btn-back:hover {
-      background: #64d5b5;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #999;
-      margin-bottom: 2rem;
-      margin-top: 3rem;
+
+    .back-link:hover {
+      background: #9fe870;
+      color: #0b1417;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <img src="assets/cueva-castillo.png" alt="Cueva de El Castillo">
-    <h1>🪨 Apadrinamiento del LIG “Cueva de El Castillo” (CV014)</h1>
-  </header>
-
-  <main>
-    <h2>Compromiso con la geodiversidad y el patrimonio natural</h2>
-    <p>
-      En marzo de 2025 participé en la iniciativa <strong>“Apadrina una roca”</strong> del 
-      <strong>Instituto Geológico y Minero de España (IGME-CSIC)</strong>, apadrinando el 
-      <strong>Lugar de Interés Geológico CV014 – Cueva de El Castillo</strong>, situado en Puente Viesgo (Cantabria).
-    </p>
-    <p>
-      Este proyecto promueve la <strong>conservación, divulgación y puesta en valor del patrimonio geológico español</strong>,
-      vinculando la ciencia con la ciudadanía mediante la implicación directa en la protección de la geodiversidad.
-    </p>
-    <p>
-      La <strong>Cueva de El Castillo</strong>, declarada <em>Patrimonio Mundial por la UNESCO</em>, es un referente internacional
-      por sus manifestaciones de arte rupestre paleolítico y su importancia en los estudios sobre la evolución humana.
-      Con este apadrinamiento reafirmo mi compromiso con la <strong>protección del patrimonio natural y cultural de Cantabria</strong>
-      y con la <strong>educación ambiental y territorial</strong>.
-    </p>
-
-    <div class="info">
-      <p><strong>📍 LIG:</strong> CV014 – Cueva de El Castillo (Puente Viesgo, Cantabria)</p>
-      <p><strong>📅 Fecha de apadrinamiento:</strong> 11 de marzo de 2025</p>
-      <p><strong>🔗 Enlace:</strong> 
-        <a href="https://info.igme.es/ielig/LIGInfo.aspx?codigo=CV014" target="_blank">
-          Ficha oficial del IGME-CSIC
+  <div class="page">
+    <!-- CABECERA (idéntica al index) -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand">
+          <div class="brand-logo">
+            <img src="assets/logo-gpt-geo.png" alt="Logo GeoAI & SIG" />
+          </div>
+          <div class="brand-text">
+            <h1>PAGLA</h1>
+            <span>Spatial Analysis · SIG · GeoAI</span>
+          </div>
         </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+
+        <nav class="nav">
+          <ul id="navList">
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="index.html#visores">Visores</a></li>
+            <li><a href="index.html#opiniones">Artículos</a></li>
+            <li><a href="index.html#recursos">Recursos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-inner">
+      <h2>Apadrinamiento del LIG “Cueva de El Castillo” (CV014)</h2>
+      <p>
+        Proyecto de conservación y divulgación dentro del programa
+        <strong>“Apadrina una roca”</strong> del Instituto Geológico y Minero de España (IGME-CSIC),
+        centrado en el <strong>Lugar de Interés Geológico CV014</strong> situado en Puente Viesgo, Cantabria.
       </p>
-    </div>
+    </section>
 
-    <a href="index.html" class="btn-back">⬅ Volver al portafolio</a>
-  </main>
+    <!-- CONTENIDO -->
+    <main>
+      <div class="content-grid">
+        <article>
+          <h3>Compromiso con la geodiversidad y el patrimonio natural</h3>
+          <p>
+            En marzo de 2025 participé en la iniciativa <strong>“Apadrina una roca”</strong>,
+            apadrinando el <strong>Lugar de Interés Geológico CV014 – Cueva de El Castillo</strong>.
+            Este programa fomenta la <strong>protección, divulgación y puesta en valor del patrimonio geológico español</strong>,
+            acercando la ciencia geográfica a la ciudadanía mediante la implicación activa.
+          </p>
+          <p>
+            La <strong>Cueva de El Castillo</strong>, declarada <em>Patrimonio Mundial por la UNESCO</em>,
+            es un referente por su arte rupestre paleolítico y su valor científico en el estudio de la evolución humana.
+          </p>
+          <p>
+            Con este apadrinamiento reafirmo mi compromiso con la
+            <strong>protección del patrimonio natural y cultural de Cantabria</strong>
+            y la <strong>educación ambiental y territorial</strong>.
+          </p>
+          <a href="index.html#opiniones" class="back-link">← Volver al portafolio</a>
+        </article>
 
-  <footer>
-    © 2025 Pablo González Aja · PAGLA.ES
-  </footer>
+        <aside>
+          <h4>Ficha técnica</h4>
+          <ul class="meta-list">
+            <li><strong>LIG:</strong> Cueva de El Castillo (CV014)</li>
+            <li><strong>Ubicación:</strong> Puente Viesgo (Cantabria)</li>
+            <li><strong>Fecha de apadrinamiento:</strong> 11 de marzo de 2025</li>
+            <li><strong>Diploma emitido:</strong> 07 de noviembre de 2025</li>
+            <li><strong>Organiza:</strong> IGME-CSIC · Inventario Español de LIG</li>
+            <li>
+              <strong>Ficha oficial:</strong>
+              <a href="https://info.igme.es/ielig/LIGInfo.aspx?codigo=CV014" target="_blank">Ver LIG CV014 →</a>
+            </li>
+          </ul>
+
+          <div class="diploma-frame">
+            <iframe src="assets/diplomas/CV014.pdf" title="Diploma de apadrinamiento LIG Cueva de El Castillo"></iframe>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- PIE -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>&copy; <span id="year"></span> Pablo González Aja · GeoAI & SIG.</span>
+        <span>Construido para GitHub Pages.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
